@@ -1,3 +1,21 @@
+set nocompatible              " be iMproved, required
+
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'Valloric/YouCompleteMe'
+
+call vundle#end()            " required
+filetype plugin indent on  
+"Vundle material upto here
+
 set number "show line number
 set relativenumber
 " highlitt current line and add line numbers
@@ -13,9 +31,6 @@ syntax on "check syntax
 set tabstop=4 " PEP-8 uses 4 spaces per indentation level
 set shiftwidth=4 " shifting (PEP-8)
 set expandtab " spaces instead of tabs (PEP-8, and just bettter in general)
-filetype on " file type detection
-filetype indent on " special indentation rules for file type
-filetype plugin on " auto-completion rules for file type
 
 set hls " highlight search terms (:noh to turn off temporarily)
 set incsearch " search as you type
